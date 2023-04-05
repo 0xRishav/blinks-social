@@ -1,7 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { Landing } from './pages';
 import styled from 'styled-components';
+import Landing from './pages/Landing';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <AppWrapper>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </AppWrapper>
     </div>

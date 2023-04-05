@@ -1,8 +1,9 @@
 import LandingPageSvg from '../assets/LandingPageSvg.svg';
 import styled from 'styled-components';
 import { Tilt } from 'react-tilt';
-import { Button, Logo } from '../components';
+import { Button, Logo, NavDiv } from '../components';
 import { Link } from 'react-router-dom';
+import { StyledButton } from '../components/Buttons.styles';
 
 const Landing = () => {
   const options = {
@@ -21,7 +22,7 @@ const Landing = () => {
       <NavDiv>
         <Logo />
         <Link>
-          <Button primary>Log In</Button>
+          <StyledButton primary>Log In</StyledButton>
         </Link>
       </NavDiv>
       <TwoColumnFlexWrapper>
@@ -31,8 +32,8 @@ const Landing = () => {
             You <span style={{ color: '#7C37A6' }}>Want</span>.
           </h1>
           <p>
-            RSocial allows users to upload photos through RSocial website. Users
-            can add a caption to each of their posts.
+            Blinks Social allows users to upload photos through Blinks Social
+            website. Users can add a caption to each of their posts.
           </p>
         </Left>
         <Right>
@@ -44,8 +45,8 @@ const Landing = () => {
           </Tilt>
         </Right>
       </TwoColumnFlexWrapper>
-      <Button primary>Log In</Button>
-      <Button style={{ marginLeft: '1rem' }}>Sign Up</Button>
+      <StyledButton primary>Log In</StyledButton>
+      <StyledButton style={{ marginLeft: '1rem' }}>Sign Up</StyledButton>
     </div>
   );
 };
@@ -53,12 +54,6 @@ const Landing = () => {
 const LandingSvg = styled.img`
   height: auto;
   width: 20%;
-`;
-const NavDiv = styled.div`
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 const TwoColumnFlexWrapper = styled.div`
