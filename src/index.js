@@ -12,6 +12,7 @@ import './fonts/Gilroy-Medium.ttf';
 import './fonts/Gilroy-Regular.ttf';
 import './fonts/Gilroy-SemiBold.ttf';
 import './fonts/Gilroy-Thin.ttf';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -19,7 +20,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>
 );
